@@ -32,20 +32,19 @@ Includes loading/empty/error states on the frontend and a clean, modular **Expre
 
 ## API Endpoint
 
-API: /api/search (POST)
+- API: /api/search (POST)
 
-URL: http://localhost:4000/api/search
-
-Body: { "query": "string" }
+- URL: http://localhost:4000/api/search
+- Body: { "query": "string" }
 
 Responses:
-200 OK: results , summary, sources
-404 Error: { "results": [], "message": "No matches found." } when nothing matches
-400 Bad Request: { "message": "Query must not be empty." }
+- 200 OK: results , summary, sources
+- 404 Error: { "results": [], "message": "No matches found." } when nothing matches
+- 400 Bad Request: { "message": "Query must not be empty." }
 
 ## Assumptions & Notes
 
-No external DB/APIs — dataset is bundled in the backend (data/faqs.js).
-Keyword Scoring is intentionally simple.
-CORS is permissive for local dev; restrict in production.
-Security: helmet enabled.
+- No external DB/APIs — dataset is bundled in the backend (data/faqs.js).
+- Keyword Scoring is intentionally simple.
+- CORS is permissive for local dev; restrict in production.
+- Security: helmet enabled.
